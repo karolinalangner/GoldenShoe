@@ -1,0 +1,41 @@
+<div class="product-page">
+    <h3><%= @product.name %> </h3>
+    <div class="photos">
+        <div class="miniatures">
+            <% @product.photos.each do |photo| %>
+            <div class="miniature">
+                <img src=<%= photo %> alt="<%= @product.name %>" class="btn"/>
+            </div>
+            <% end %>
+        </div>
+        <div class="large-photo">
+        
+        </div>
+        <div class="details">
+            <div class="price">
+                <p><%= %w[nike adidas prada dr.martens].sample.capitalize %></p>  
+                <p>£<%= @product.price %> </p>
+            </div>
+            <div class="description">
+                <p><strong>Product description:<br><br></strong><%= @product.description %></p>
+            </div>
+            <div class="sizes">
+                <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Choose your size:
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">4.5</a>
+                    <a class="dropdown-item" href="#">5</a>
+                    <a class="dropdown-item" href="#">5.5</a>
+                    <a class="dropdown-item" href="#">6</a>
+                    <a class="dropdown-item" href="#">7</a>
+                </div>
+                <button class="btn bordered add-item"><strong>Add to basket</strong></button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    
+</div>

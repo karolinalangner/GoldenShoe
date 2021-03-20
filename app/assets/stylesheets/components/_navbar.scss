@@ -1,12 +1,77 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  flex-direction: column;
+  z-index: 999;
+  background-color: #F4F4F4;
+
+  .navbar-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+  }
+  .dropdown button{
+    color:white;
+  }
+  .logo {
+    height: 243px;
+  }
+  .basket {
+    padding-top: 8px;
+    display: none;
+    margin-left: 65%;
+    display: flex;
+    justify-content: space-between;
+    
+      .total-price {
+        padding-left: 8px;
+      }
+
+      a{
+        text-decoration: none;
+        color: black;
+        font-size: 150%;
+      }
+  }
+  .hamburger {
+    position: absolute;
+    top: 30%;
+    right: 30px;
+    display: none;
+    i {
+      font-size: 30px;
+    }
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+
+
+@media only screen and (max-width: 580px) {
+  .navbar {
+    justify-content: center;
+    height: 100px!important;
+
+    .hamburger {
+      display: block;
+    }
+    .logo {
+      
+      height: 65px!important; 
+    }
+    .navbar-menu {
+      display:none;
+    }
+    .navbar-menu.show {
+      display:block;
+    }
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+@media only screen and (min-width: 1800px) {
+  .navbar .basket {
+    margin-left: 90%;
+  }
+ 
 }

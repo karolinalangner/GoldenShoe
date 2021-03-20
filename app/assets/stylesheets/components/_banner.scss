@@ -1,0 +1,29 @@
+.banner {
+    height: 90vh;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+    h4 {
+        margin-top: 200px;
+        font-size: 180%;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .banner {
+        height: 50vh;
+        background-position: 70%;
+        background-repeat: no-repeat;
+        h4 {
+            font-size: 1.6rem;
+        }
+
+    }
+  }

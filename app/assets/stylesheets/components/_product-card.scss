@@ -1,0 +1,43 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    max-width:1500px;
+    margin: auto;
+
+}
+.products {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.product {
+    height: 250px;
+    width: 200px;
+    padding: 10px 20px;
+    margin: 0px 40px;
+    .description {
+        margin-top : 5px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .product-name {
+            margin:auto;
+            min-height: 44px;
+        }
+
+        .price {
+            margin-top: 0;
+        } 
+    }
+
+    img { 
+        width: 100%;
+
+    }
+}

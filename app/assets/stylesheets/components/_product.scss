@@ -1,0 +1,28 @@
+.product-page {
+    width: 80%;
+    margin: auto;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .photos  {
+        margin-top: 50px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1.5fr;
+
+        .miniature {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            height: 100%;
+        }
+
+    }
+}   

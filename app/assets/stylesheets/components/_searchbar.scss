@@ -1,0 +1,12 @@
+.searchbar {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+    input {
+        background: rgba(255,255,255,0.3);
+    }
+    .input-group-text {
+        background: rgba(255,255,255,0.8);;
+    }
+}
