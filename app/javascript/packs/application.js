@@ -26,6 +26,8 @@ require("channels")
 import "bootstrap";
 import { navbar } from '../components/navbar';
 import { hamburger } from '../components/hamburger';
+import { displayPhoto } from '../components/displayphoto';
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -37,3 +39,4 @@ document.addEventListener('turbolinks:load', () => {
 });
 window.onscroll = function() { navbar();  };
 window.onload = function() { hamburger(); navbar(); };
+window.onclick = function() { displayPhoto(); };

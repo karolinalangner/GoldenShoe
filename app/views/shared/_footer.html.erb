@@ -1,0 +1,79 @@
+<div class="footer  <%= "dn" if !current_page?(root_path) %>">
+    <div class="social-media column">
+        
+         <p class="dn"><strong>Stay in touch!</strong></p><br> 
+         <p class="dn"><i class="fas fa-at" style="color:gray;"></i> <a href="#">Subscribe to our newsletter</a> and get 10% off your first order!</p>   
+            <ul class="list-inline mt-2"> 
+                <li><a href="#"><i class="fab fa-linkedin large-font"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram large-font"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter large-font"></i></a></li>
+            </ul>
+        
+            <ul class="list-inline mt-4">
+            <img src="https://www.office.co.uk/medias/sys_master/root/hba/h8a/10244475715614/apple.svg" alt="">
+            <img src="https://www.office.co.uk/medias/sys_master/root/hb9/hca/10397531439134/visa.png" alt="">
+            <img src="https://www.office.co.uk/medias/sys_master/root/h6b/h95/10244475322398/paypal.svg" alt="">
+            <img src="https://www.office.co.uk/medias/sys_master/root/h7f/h7a/10244475551774/amex.svg" alt="">
+            </ul> 
+    </div>
+
+    <div class="help column dn">
+        <p><strong>Need help?</strong></p>
+        <ul class="list" style="list-style-type:none;"> 
+        
+            <li>
+                <a href="#">Livechat</a> 
+                <p><small>For a fast and helpful response, chat with one of our live chat support team.<br><strong>Opening Hours:</strong> Mon - Fri 8am - 6:30pm & Saturday 8:30am - 4:30pm</small></p>
+            </li>
+             <li>
+                <a href="#">Helpline</a> 
+                <p><small>Call our helpline and talk to a member of our support team.<br><strong>Opening Hours:</strong> Mon - Fri 8am - 6:30pm & Saturday 8:30am - 4:30pm</small></p>
+            </li>
+            <li>
+                <a href="#">FAQs</a>
+                <p><small>Check Frequently Asked Questions.<br></strong></small></p>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="info column ">
+        <p><strong>Delivery & Returns</strong></p>
+        <ul class="list" style="list-style-type:none;"> 
+
+            <li>
+                <a href="#">Standard Delivery</a> 
+                <p><small>Usually 3-5 working days. <u>Read more</u></small></p>
+            </li>
+             <li>
+                <a href="#">Next Day Delivery</a> 
+                <p><small>Order before 22:00 and get your order tomorrow.<u>Read more</u></small></p>
+            </li>
+            <li>
+                <a href="#">Collect at store</a> 
+                <p><small>Find your nearest Golden Shoe shop. <u>See on a map</u></small></p>
+            </li>
+             <li>
+                <a href="#">Free returns</a> 
+                <p><small>Learn more about our return policy. <u>Read more</u></small></p>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="logout column">
+     
+       <p><strong>Account</strong></p>
+        <ul style="list-style-type:none;" class="list">
+           <% if user_signed_in? %>
+                <li><a href="#" style="font-weight: 100;">My account</a></li>
+                <p><small>Check your account details and your order history.</small></p>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete  %></li>
+            <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path %></li> |
+              <li><%= link_to "Login", new_user_session_path %></li>
+            <% end %>
+        </ul>
+    
+    </div>
+</div>
