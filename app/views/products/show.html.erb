@@ -4,12 +4,12 @@
         <div class="miniatures">
             <% @product.photos.each do |photo| %>
             <div class="miniature">
-                <img src=<%= photo %> alt="<%= @product.name %>" class="btn"/>
+                <img src=<%= photo %> alt="<%= @product.name %>" class="btn photo"/>
             </div>
             <% end %>
         </div>
-        <div class="large-photo">
-        
+        <div class="display">
+            <img src=<%= @product.photos.first %> alt="<%= @product.name %>" class="btn large-photo"/>
         </div>
         <div class="details">
             <div class="price">
@@ -25,11 +25,11 @@
                    Choose your size:
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">4.5</a>
-                    <a class="dropdown-item" href="#">5</a>
-                    <a class="dropdown-item" href="#">5.5</a>
-                    <a class="dropdown-item" href="#">6</a>
-                    <a class="dropdown-item" href="#">7</a>
+                    <p class="dropdown-item" href="#">4.5</p>
+                    <p class="dropdown-item" href="#">5</p>
+                    <p class="dropdown-item" href="#">5.5</p>
+                    <p class="dropdown-item" href="#">6</p>
+                    <p class="dropdown-item" href="#">7</p>
                 </div>
                 <button class="btn bordered add-item"><strong>Add to basket</strong></button>
                 </div>

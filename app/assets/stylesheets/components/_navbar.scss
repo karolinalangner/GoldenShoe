@@ -66,6 +66,13 @@
     .navbar-menu.show {
       display:block;
     }
+
+    .basket {
+      flex-direction: column;
+      .total-price {
+        padding: 0;
+      }
+    }
   }
 }
 
