@@ -2,7 +2,7 @@
     <div class="social-media column">
         
          <p class="dn"><strong>Stay in touch!</strong></p><br> 
-         <p class="dn"><i class="fas fa-at" style="color:gray;"></i> <a href="#">Subscribe to our newsletter</a> and get 10% off your first order!</p>   
+         <p class="dn"><i class="fas fa-at" style="color:gray;"></i> <a href="#">Subscribe to our newsletter</a><br> and get 10% off your first order!</p>   
             <ul class="list-inline mt-2"> 
                 <li><a href="#"><i class="fab fa-linkedin large-font"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram large-font"></i></a></li>
@@ -22,15 +22,15 @@
         <ul class="list" style="list-style-type:none;"> 
         
             <li>
-                <a href="#">Livechat</a> 
+                <a href="#"><i class="far fa-comments"></i> Livechat</a> 
                 <p><small>For a fast and helpful response, chat with one of our live chat support team.<br><strong>Opening Hours:</strong> Mon - Fri 8am - 6:30pm & Saturday 8:30am - 4:30pm</small></p>
             </li>
              <li>
-                <a href="#">Helpline</a> 
+                <a href="#"><i class="fas fa-phone-volume"></i> Helpline</a> 
                 <p><small>Call our helpline and talk to a member of our support team.<br><strong>Opening Hours:</strong> Mon - Fri 8am - 6:30pm & Saturday 8:30am - 4:30pm</small></p>
             </li>
             <li>
-                <a href="#">FAQs</a>
+                <a href="#"><i class="fas fa-question"></i> FAQs</a>
                 <p><small>Check Frequently Asked Questions.<br></strong></small></p>
             </li>
         </ul>
@@ -42,19 +42,19 @@
         <ul class="list" style="list-style-type:none;"> 
 
             <li>
-                <a href="#">Standard Delivery</a> 
+                <a href="#"><i class="fas fa-truck"></i> Standard Delivery</a> 
                 <p><small>Usually 3-5 working days. <u>Read more</u></small></p>
             </li>
              <li>
-                <a href="#">Next Day Delivery</a> 
+                <a href="#"><i class="fas fa-truck"></i> Next Day Delivery</a> 
                 <p><small>Order before 22:00 and get your order tomorrow.<u>Read more</u></small></p>
             </li>
             <li>
-                <a href="#">Collect at store</a> 
+                <a href="#"><i class="fas fa-store"></i> Collect at store</a> 
                 <p><small>Find your nearest Golden Shoe shop. <u>See on a map</u></small></p>
             </li>
              <li>
-                <a href="#">Free returns</a> 
+                <a href="#"><i class="fas fa-undo-alt"></i> Free returns</a> 
                 <p><small>Learn more about our return policy. <u>Read more</u></small></p>
             </li>
         </ul>
@@ -66,14 +66,19 @@
        <p><strong>Account</strong></p>
         <ul style="list-style-type:none;" class="list">
            <% if user_signed_in? %>
-                <li><a href="#" style="font-weight: 100;">My account</a></li>
+                <li><a href="#" style="font-weight: 100;"><i class="fas fa-user"></i> My account</a></li>
                 <p><small>Check your account details and your order history.</small></p>
-                <li><%= link_to "Logout", destroy_user_session_path, method: :delete  %></li>
+                <hr>
+                <li><i class="fas fa-sign-out-alt" style="color:gray;"></i> <%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
             <% else %>
-              <li><%= link_to "Sign up", new_user_registration_path %></li> |
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
               <li><%= link_to "Login", new_user_session_path %></li>
             <% end %>
         </ul>
-    
+      
+        <ul class="list" style="list-style-type:none;">   
+            <hr>
+            <li><a href="#"> T&Cs</a></li>
+        </ul>
     </div>
 </div>

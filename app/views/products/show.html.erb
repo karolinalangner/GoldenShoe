@@ -1,5 +1,4 @@
 <div class="product-page">
-    <h3><%= @product.name %> </h3>
     <div class="photos">
         <div class="miniatures">
             <% @product.photos.each do |photo| %>
@@ -12,6 +11,7 @@
             <img src=<%= @product.photos.first %> alt="<%= @product.name %>" class="btn large-photo"/>
         </div>
         <div class="details">
+            <h3><%= @product.name %> </h3>
             <div class="price">
                 <p><%= %w[nike adidas prada dr.martens].sample.capitalize %></p>  
                 <p>£<%= @product.price %> </p>
@@ -20,22 +20,26 @@
                 <p><strong>Product description:<br><br></strong><%= @product.description %></p>
             </div>
             <div class="sizes">
+                <p><strong>Available sizes:</strong></p>
+                <p><del>4</del>  |  4.5  |  5  |  5.5  |  6  |  <del>6.5</del>  |  7 </p>
                 <div class="dropdown">
-                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   Choose your size:
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <p class="dropdown-item" href="#">4.5</p>
-                    <p class="dropdown-item" href="#">5</p>
-                    <p class="dropdown-item" href="#">5.5</p>
-                    <p class="dropdown-item" href="#">6</p>
-                    <p class="dropdown-item" href="#">7</p>
+                    <button class="btn dropdown-toggle sizes-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Choose your size:
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p class="dropdown-item size" href="#">UK 4.5</p>
+                        <p class="dropdown-item size" href="#">UK 5</p>
+                        <p class="dropdown-item size" href="#">UK 5.5</p>
+                        <p class="dropdown-item size" href="#">UK 6</p>
+                        <p class="dropdown-item size" href="#">UK 7</p>
+                    </div>
+                    <button class="btn bordered add-item"><strong>Add to basket</strong></button>
+                        <div class="size-guide mt-4" style="color: gray;">
+                <p><small>Check our <u>size guide »</u></small></p>
+            </div>
                 </div>
-                <button class="btn bordered add-item"><strong>Add to basket</strong></button>
-                </div>
+        
             </div>
         </div>
     </div>
-   
-    
-</div>
+</div> 
