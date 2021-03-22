@@ -27,6 +27,9 @@ import "bootstrap";
 import { navbar } from '../components/navbar';
 import { hamburger } from '../components/hamburger';
 import { displayPhoto } from '../components/displayphoto';
+import { updateSize } from '../components/updatesize';
+
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -38,5 +41,5 @@ document.addEventListener('turbolinks:load', () => {
   
 });
 window.onscroll = function() { navbar();  };
-window.onload = function() { hamburger(); navbar(); };
-window.onclick = function() { displayPhoto(); };
+window.onload = function() { hamburger(); };
+window.onclick = function() { displayPhoto(); updateSize(); };
