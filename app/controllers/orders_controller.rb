@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
           end
       end
 
-      def booking_params
+      def order_params
         params.require(:order).permit(:delivery)
       end
 
