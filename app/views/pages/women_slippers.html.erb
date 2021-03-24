@@ -1,0 +1,17 @@
+<div class="home">
+    <%= render 'shared/sidemenu' %>
+    <div class="products">
+    <h4 class="mt-3">Women's Slippers</h4> 
+            <div class="cards"> 
+                <% @slippers.each do |product| %>
+                        <div class="product">
+                            <a href="#"><img src=<%= product.photos.first %> alt="<%= product.name%>"/></a>
+                            <div class="description">
+                                <p class="text-center product-name"><strong><%= link_to product.name, product %></strong></p>
+                                <p class="text-center price">£<%= product.price%></p>
+                            </div>
+                        </div>
+                <%end%>
+            </div>
+    </div>
+</div>

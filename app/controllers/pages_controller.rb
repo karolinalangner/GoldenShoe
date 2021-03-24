@@ -3,8 +3,8 @@ class PagesController < ApplicationController
     @products = Product.all
   end
   
-  def show
-  
+  def women_slippers
+    @slippers = Product.where(category: 'slippers')
   end
   
   
