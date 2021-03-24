@@ -18,6 +18,7 @@
             </div>
             <div class="description">
                 <p><strong>Product description:<br><br></strong><%= @product.description %></p>
+                <p class="gray">Colour: <%= @product.colour %>  <br>Upper and Sole: Other.<br>Lining: Textile.</p>
             </div>
             <div class="sizes">
                 <p><strong>Available sizes:</strong></p>
@@ -35,10 +36,12 @@
                     </div>
                     <button class="btn bordered add-item"><strong>Add to basket</strong></button>
                         <div class="size-guide mt-4" style="color: gray;">
-                <p><small>Check our <u>size guide »</u></small></p>
+                <p><small><i class="fas fa-ruler"></i> Check our <u>size guide »</u></small></p>
+                <p><small><i class="fas fa-gift"></i> Is it a gift? We offer<u> gift wrapping »</u></small></p>
+              
             </div>
                 </div>
-        
+            
             </div>
         </div>
     </div>
