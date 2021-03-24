@@ -1,47 +1,48 @@
-
-<div class=" products">
+<div class="home">
 <%= render 'shared/sidemenu' %>
-    <h3><strong>New in</strong></h3>
-    <h4 class="mt-3">Women</h4> 
-    <div class="cards"> 
-        <% @products.each do |product| %>
-            <% if product.category == "women" %>
-                <div class="product">
-                    <a href="#"><img src=<%= product.photos.first %> alt="<%= product.name%>"/></a>
-                    <div class="description">
-                        <p class="text-center product-name"><strong><%= link_to product.name, product %></strong></p>
-                        <p class="text-center price">£<%= product.price%></p>
+    <div class="products">
+        <h3><strong>New in</strong></h3>
+        <h4 class="mt-3">Women</h4> 
+        <div class="cards"> 
+            <% @products.each do |product| %>
+                <% if product.category == "women" %>
+                    <div class="product">
+                        <a href="#"><img src=<%= product.photos.first %> alt="<%= product.name%>"/></a>
+                        <div class="description">
+                            <p class="text-center product-name"><strong><%= link_to product.name, product %></strong></p>
+                            <p class="text-center price">£<%= product.price%></p>
+                        </div>
                     </div>
-                </div>
-            <% end %>
-        <%end%>
-    </div>
-    <h4 class="mt-3">Men</h4> 
-    <div class="cards"> 
-        <% @products.each do |product| %>
-            <% if product.category == "men" %>
-                <div class="product">
-                    <a href="#"><img src=<%= product.photos.first %> alt="<%= product.name%>"/></a>                    
-                    <div class="description">
-                        <p class="text-center product-name"><strong><%= link_to product.name, product %></strong></p>
-                        <p class="text-center price">£<%= product.price %></p>
+                <% end %>
+            <%end%>
+        </div>
+        <h4 class="mt-3">Men</h4> 
+        <div class="cards"> 
+            <% @products.each do |product| %>
+                <% if product.category == "men" %>
+                    <div class="product">
+                        <a href="#"><img src=<%= product.photos.first %> alt="<%= product.name%>"/></a>                    
+                        <div class="description">
+                            <p class="text-center product-name"><strong><%= link_to product.name, product %></strong></p>
+                            <p class="text-center price">£<%= product.price %></p>
+                        </div>
                     </div>
-                </div>
-            <% end %>
-        <%end%>
-    </div>
-    <h4 class="mt-3">Kids</h4>
-    <div class="cards"> 
-        <% @products.each do |product| %>
-            <% if product.category == "kids" %>
-                <div class="product">
-                    <a href="#"><img src=<%= product.photos.first %> alt="<%= product.name%>"/></a>
-                    <div class="description">
-                        <p class="text-center product-name"><strong><%= link_to product.name, product %></strong></p>
-                        <p class="text-center price">£<%= product.price %></p>
+                <% end %>
+            <%end%>
+        </div>
+        <h4 class="mt-3">Kids</h4>
+        <div class="cards"> 
+            <% @products.each do |product| %>
+                <% if product.category == "kids" %>
+                    <div class="product">
+                        <a href="#"><img src=<%= product.photos.first %> alt="<%= product.name%>"/></a>
+                        <div class="description">
+                            <p class="text-center product-name"><strong><%= link_to product.name, product %></strong></p>
+                            <p class="text-center price">£<%= product.price %></p>
+                        </div>
                     </div>
-                </div>
-            <% end %>
-        <%end%>
+                <% end %>
+            <%end%>
+        </div>
     </div>
 </div>
