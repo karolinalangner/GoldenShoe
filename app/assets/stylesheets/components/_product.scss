@@ -61,8 +61,10 @@
             .display {
                 display: flex;
                 justify-content: center;
+                width: auto;
+                height: 350px;
                 img {
-                    height: 80%;
+                    height: 100%;
                 }
                 
             }     

@@ -5,7 +5,6 @@ export const updateSize = () => {
     sizes.forEach (size => {
         size.addEventListener('click', () => {
             sizesDropdown.innerText = size.innerHTML;
-            console.log("photo should change")
         })
     });
   }

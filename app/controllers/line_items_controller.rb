@@ -1,4 +1,8 @@
 class LineItemsController < ApplicationController
+
+    def new
+    end
+  
     def create
         # Find associated product and current cart
         chosen_product = Product.find(params[:product_id])
@@ -20,9 +24,32 @@ class LineItemsController < ApplicationController
         @line_item.save
         redirect_to cart_path(current_cart)
       end
+
+      def destroy
+        @line_item = LineItem.find(params[:id])
+        @line_item.destroy
+        redirect_to cart_path(@current_cart)
+      end
+    
+      def add_quantity
+        @line_item = LineItem.find(params[:id])
+        @line_item.quantity += 1
+        @line_item.save
+        redirect_to cart_path(@current_cart)
+      end
+      
+      def reduce_quantity
+        @line_item = LineItem.find(params[:id])
+        if @line_item.quantity > 1
+          @line_item.quantity -= 1
+        end
+        @line_item.save
+        redirect_to cart_path(@current_cart)
+      end
       
       private
+      
         def line_item_params
-          params.require(:line_item).permit(:quantity,:product_id, :cart_id)
+          params.require(:line_item).permit(:quantity)
         end
 end

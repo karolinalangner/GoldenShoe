@@ -19,6 +19,7 @@ export const navbar = () => {
             navbarMenu.style.marginRight = "auto";
             navbarMenu.style.marginLeft = "auto";
             basket.style.display = "block";
+            basket.style.marginLeft = "80%";
             basket.style.color ="black";
             basketIcon.style.color = "black";
             dropdowns.forEach (dropdown => {
@@ -30,6 +31,7 @@ export const navbar = () => {
         } else {
             logo.style.height = "243px";
             logo.style.marginRight = "auto";
+            basket.style.marginLeft = "85%";
             navbar.style.background = "transparent";
             navbar.style.height = "auto";
             navbar.style.flexDirection = "column";
@@ -42,7 +44,8 @@ export const navbar = () => {
             }
         }
     } else {
-        logo.style.height = "90px";
+        logo.style.height = "90px"; 
+        basket.style.marginLeft = "85%";
         logo.style.marginRight = "20px";
         navbar.style.position = "fixed";
         navbar.style.top = "0";
