@@ -1,0 +1,26 @@
+.order {
+    top: 150px; 
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+
+    
+        .summary {
+        
+        display: flex;
+        text-align: center; 
+    }
+
+    .delivery-payment-options {
+        width: 40%;
+
+        .calculate-total {
+            font-size: 20px;
+        }
+    }
+    
+}

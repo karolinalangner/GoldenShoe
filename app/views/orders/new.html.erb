@@ -1,0 +1,22 @@
+<div class="order card" >
+
+  <h4>Order summary:</h4>
+  <div class="summary">
+    
+    <% @current_cart.line_items.each do |item| %>
+    <p><%= item.quantity %> x <%= item.product.name %> (<%= item.product.colour %>) | <%= item.total_price %></p>
+    <% end %>
+    
+  </div>
+  <div class="delivery-payment-options">
+    <%= simple_form_for [@order] do |f| %>
+        <%= f.input :payment_method, as: :radio_buttons %>
+        <%= f.input :delivery, selected: 1 %>
+      <div class="calculate-total">
+        <p><strong>Total:</strong><p class="total-order">£<%= (@current_cart.sub_total + 5.99) %> </p></p>  
+      </div>
+      <%= f.submit "Place your order", class: 'btn bordered' %>
+    <% end %>
+    
+  </div>
+</div>

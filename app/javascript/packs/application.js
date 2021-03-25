@@ -28,7 +28,7 @@ import { navbar } from '../components/navbar';
 import { hamburger } from '../components/hamburger';
 import { displayPhoto } from '../components/displayphoto';
 import { updateSize } from '../components/updatesize';
-
+import { updateTotal } from '../components/updatetotalprice';
 
 
 // Internal imports, e.g:
@@ -41,5 +41,5 @@ document.addEventListener('turbolinks:load', () => {
   
 });
 window.onscroll = function() { navbar();  };
-window.onload = function() { hamburger(); };
-window.onclick = function() { displayPhoto(); updateSize(); };
+window.onload = function() { hamburger();  };
+window.onclick = function() { displayPhoto(); updateSize(); updateTotal(); };

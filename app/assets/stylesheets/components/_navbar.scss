@@ -3,29 +3,32 @@
   position: fixed;
   top: 0;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row-reverse;
   z-index: 999;
   background-color: #F4F4F4;
 
   .navbar-menu {
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     justify-content: space-around;
-    width: 60%;
+    width: 58%;
   }
   .dropdown-menu {
     background-color: #F4F4F4;
     border: none;
   }
   .dropdown button{
-    color:white;
+    color: black;
   }
   .logo {
-    height: 243px;
+    height: 90px;
+    margin-right: 20px;
   }
   .basket {
     padding-top: 8px;
-    display: none;
-    margin-left: 60%;
+    display: block;
+    margin-left: 80%;
     display: flex;
     justify-content: space-between;
     
@@ -72,10 +75,15 @@
     }
 
     .basket {
+      align-items: center;
       flex-direction: column;
       .total-price {
         padding: 0;
       }
+      
+
+    .badge-secondary {
+      width: 20%;
     }
   }
 }
@@ -83,6 +91,8 @@
 @media only screen and (min-width: 1800px) {
   .navbar .basket {
     margin-left: 90%;
+    
+    }
   }
  
 }
