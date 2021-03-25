@@ -27,7 +27,6 @@ import "bootstrap";
 import { navbar } from '../components/navbar';
 import { hamburger } from '../components/hamburger';
 import { displayPhoto } from '../components/displayphoto';
-import { updateSize } from '../components/updatesize';
 import { updateTotal } from '../components/updatetotalprice';
 
 
@@ -41,5 +40,5 @@ document.addEventListener('turbolinks:load', () => {
   
 });
 window.onscroll = function() { navbar();  };
-window.onload = function() { hamburger();  };
-window.onclick = function() { displayPhoto(); updateSize(); updateTotal(); };
+window.onload = function() {  };
+window.onclick = function() { displayPhoto(); updateTotal(); hamburger(); };

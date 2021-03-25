@@ -3,6 +3,29 @@
     flex-direction: row;
     padding-top: 50px;
 }
+.promo-belt {
+    padding: 10px;
+    background-color: pink;
+    margin: 20px 0;
+    .promo-cards {
+        justify-content: space-evenly;
+        .promo-card {
+            width: 49%;
+            height: 233px;
+            background-position: bottom;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+    }
+}
 
 .cards {
     display: flex;
@@ -49,5 +72,7 @@
     }
 }
 @media only screen and (max-width: 580px) {
-   
+   .home {
+       padding-top: 0;
+   }
 }

@@ -1,14 +1,35 @@
-<div class="products" style="padding-top:300px; height: 80vh;">
+<div class="cart-page card">
+  <h4>Your Basket</h4>
+  <div class="product-cards-basket">
+    <% @cart.line_items.sort.each do |line_item| %>
+      <div class="product-card">
+          <div class="miniature">
+            <img src=<%= line_item.product.photos.first %> alt="">
+          </div>
+          <div class="details">
+            <div class="prod-name">
+              <p><%= link_to line_item.product.name, product_path(line_item.product) %> - <%= line_item.product.colour %> - (UK<%= line_item.product_size %>) - £<%= (line_item.product.price) %> 
+</p>  
+            </div>
+            <div class="prod-quantity">
+               <p><small> Quantity: <%= line_item.quantity %> </small><br></p>
+              <div class="change-quantity">
+                <%= link_to "", line_item_add_path(:id => line_item),class: "fas fa-sort-up btn", method: :post, remote:true %> <%= link_to " ", line_item_reduce_path(:id => line_item), class: "btn fas fa-sort-down", method: :post, remote:true  %> </p>
+              </div>
+            </div>
+            <small class="remove"><%= link_to "Remove item", line_item_path(line_item), method: :delete, remote:true %></small>
+            <br>
+            <p>Total: £<%= (line_item.total_price) %></p>
+          </div>
+      </div>
+    
+    <% end %>
+  </div>
+  <h3>Sub total: £<%= (@cart.sub_total) %></h3>
+  <%= link_to "Continue shopping", root_path, class:"btn bordered mt-2" %><br>
 
-<div class="card">
-  <% @cart.line_items.each do |line_item| %>
-    <div class="miniature"></div> <%= line_item.product.name %> <%= number_to_currency(line_item.product.price) %> x <%= line_item.quantity %> Total Price: <%= number_to_currency(line_item.total_price) %>  <%= link_to "Remove item", line_item_path(line_item), method: :delete %>
-  </div>  
-  <% end %>
-</ul>
-<h3>Sub total: £ <%= (@cart.sub_total) %></h3>
-
-<%= link_to "Proceed to checkout", new_order_path %><br>
-
-<%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?" } %>
+  <%= link_to "Proceed to checkout", new_order_path, class:"btn bordered"  %><br>
+  <div class="d-flex align-items-baseline">
+    <i class="fas fa-trash-alt"></i><%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?" },class: "btn" %>
+  </div>
 </div>

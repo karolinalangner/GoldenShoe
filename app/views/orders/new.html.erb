@@ -1,21 +1,32 @@
 <div class="order card" >
-
-  <h4>Order summary:</h4>
-  <div class="summary">
+  <div class="order-details">
+    <h4>Order summary:</h4>
+    <br>
+    <p><strong>Your items:</strong></p>
+    <div class="summary">
     
-    <% @current_cart.line_items.each do |item| %>
-    <p><%= item.quantity %> x <%= item.product.name %> (<%= item.product.colour %>) | <%= item.total_price %></p>
-    <% end %>
-    
+      <% @current_cart.line_items.each do |item| %>
+        <p><%= item.quantity %> x <%= item.product.name %> (<%= item.product.colour %>) | £<%= item.total_price %></p>
+      <% end %>
+      <br>
+    </div>
+    <div class="delivery-address">
+      <p><strong>Delivery address:</strong></p>
+      <p><%= current_user.name %></p>
+      <p><%= current_user.address[:street]%><br><%= current_user.address[:postcode]%><br><%= current_user.address[:city]%><br><%= current_user.address[:country]%></p>
+    </div>
   </div>
   <div class="delivery-payment-options">
+  <h4>Payment and Delivery</h4>
+  <br>
     <%= simple_form_for [@order] do |f| %>
         <%= f.input :payment_method, as: :radio_buttons %>
-        <%= f.input :delivery, selected: 1 %>
+        <%= f.input :delivery, selected: 1, hint: "Learn more about delivery options »" %>
       <div class="calculate-total">
-        <p><strong>Total:</strong><p class="total-order">£<%= (@current_cart.sub_total + 5.99) %> </p></p>  
+        <p><strong>Order total:</strong><p class="total-order">£<%= (@current_cart.sub_total + 5.99) %> </p></p>  
       </div>
-      <%= f.submit "Place your order", class: 'btn bordered' %>
+     
+      <%= f.submit "Proceed to payment", class: 'btn bordered' %>
     <% end %>
     
   </div>

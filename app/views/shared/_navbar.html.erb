@@ -58,7 +58,7 @@
         <div class="basket d-flex">
           <p style="width:max-content; padding: 0 12px;">My account</p>
           <%= link_to "", "/carts/current_cart", class:"fas fa-shopping-basket" %>
-          <span style="height:50%" class="badge badge-secondary"><%= @current_cart.line_items.count %></span>
+          <span style="height:50%" class="badge badge-secondary"><%= @current_cart.count_items %></span>
           <p class="total-price"> £<ins class="total"><%= @current_cart.sub_total > 0 ? "#{@current_cart.sub_total}" : "0,00" %></ins></p>
         </div>
     </div>
