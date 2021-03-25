@@ -23,24 +23,14 @@
             <div class="sizes">
                 <p><strong>Available sizes:</strong></p>
                 <p><del>4</del>  |  4.5  |  5  |  5.5  |  6  |  <del>6.5</del>  |  7 </p>
-                <div class="dropdown">
-                    <button class=" m-1btn dropdown-toggle sizes-dropdown bordered" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Choose your size:
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p class="dropdown-item size" href="#">UK 4.5</p>
-                        <p class="dropdown-item size" href="#">UK 5</p>
-                        <p class="dropdown-item size" href="#">UK 5.5</p>
-                        <p class="dropdown-item size" href="#">UK 6</p>
-                        <p class="dropdown-item size" href="#">UK 7</p>
-                    </div>
-                <div>
                     <%= simple_form_for [@product, @line_item] do |f| %>
-                     <%= f.input :quantity %>
-                     <%= f.input :product_size %>
-                     <%= f.submit 'Add to Cart', class: 'm-1 btn bordered' %>
+                    <div class="form-inputs d-flex align-items-baseline">
+                        <%= f.input :quantity %>
+                        <%= f.input :product_size %>
+                    </div>
+                        <%= f.submit 'Add to Cart', class: 'm-1 btn bordered' %>
                     <% end %>
-                </div>
+            </div>
                 <div class="size-guide mt-4" style="color: gray;">
                     <p><small><i class="fas fa-ruler"></i> Check our <u>size guide »</u></small></p>
                     <p><small><i class="fas fa-gift"></i> Is it a gift? We offer<u> gift wrapping »</u></small></p>

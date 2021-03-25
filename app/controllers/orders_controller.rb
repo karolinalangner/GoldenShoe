@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
     @order.save
     Cart.destroy(session[:cart_id])
     session[:cart_id] = nil
-    redirect_to root_path
+    redirect_to root_path, notice: "Thank you for your order! You should shortly get an order confirmation email."
   end
 
   def order_params

@@ -4,12 +4,11 @@
     <br>
     <p><strong>Your items:</strong></p>
     <div class="summary">
-      
-      <br>
+    
       <% @current_cart.line_items.each do |item| %>
-        <p><%= item.quantity %> x <%= item.product.name %> (<%= item.product.colour %>) | <%= item.total_price %></p>
+        <p><%= item.quantity %> x <%= item.product.name %> (<%= item.product.colour %>) | £<%= item.total_price %></p>
       <% end %>
-      
+      <br>
     </div>
     <div class="delivery-address">
       <p><strong>Delivery address:</strong></p>
@@ -22,7 +21,7 @@
   <br>
     <%= simple_form_for [@order] do |f| %>
         <%= f.input :payment_method, as: :radio_buttons %>
-        <%= f.input :delivery, selected: 1 %>
+        <%= f.input :delivery, selected: 1, hint: "Learn more about delivery options »" %>
       <div class="calculate-total">
         <p><strong>Order total:</strong><p class="total-order">£<%= (@current_cart.sub_total + 5.99) %> </p></p>  
       </div>
