@@ -2,11 +2,11 @@
 
 <div class="card">
   <% @cart.line_items.each do |line_item| %>
-    <div class="miniature"></div> <%= line_item.product.name %> <%= number_to_currency(line_item.product.price) %> x <%= line_item.quantity %> Total Price: <%= number_to_currency(line_item.total_price) %>  <%= link_to "Remove item", line_item_path(line_item), method: :delete %>
+    <div class="miniature"></div> <%= line_item.product.name %> <%= line_item.product_size %>  £<%= (line_item.product.price) %> x <%= line_item.quantity %> Total Price: £<%= (line_item.total_price) %>  <%= link_to "Remove item", line_item_path(line_item), method: :delete %>
   </div>  
   <% end %>
 </ul>
-<h3>Sub total: £ <%= (@cart.sub_total) %></h3>
+<h3>Sub total: £<%= (@cart.sub_total) %></h3>
 
 <%= link_to "Proceed to checkout", new_order_path %><br>
 

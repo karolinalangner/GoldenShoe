@@ -35,7 +35,9 @@
                         <p class="dropdown-item size" href="#">UK 7</p>
                     </div>
                 <div>
-                    <%= simple_form_for [@product, @line_item], html: { class: :new_order_form } do |f| %>
+                    <%= simple_form_for [@product, @line_item] do |f| %>
+                     <%= f.input :quantity %>
+                     <%= f.input :product_size %>
                      <%= f.submit 'Add to Cart', class: 'm-1 btn bordered' %>
                     <% end %>
                 </div>
