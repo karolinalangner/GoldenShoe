@@ -1,18 +1,17 @@
 .order {
     top: 150px; 
-    height: 80vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+ 
+    width: 60%;
     margin: auto;
-
+    padding: 40px;
     
         .summary {
         
         display: flex;
-        text-align: center; 
+        
     }
 
     .delivery-payment-options {
@@ -22,5 +21,22 @@
             font-size: 20px;
         }
     }
+    .simple_form {
+        .col-form-label, label.select {
+            font-weight: 700;
+        }
+    }
     
+}
+@media only screen and (max-width: 580px) {
+    .order {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+
+        .delivery-payment-options {
+            width: 100%;
+        }
+    }
+
 }
