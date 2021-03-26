@@ -14,6 +14,9 @@
       <p><strong>Delivery address:</strong></p>
       <p><%= current_user.name %></p>
       <p><%= current_user.address[:street]%><br><%= current_user.address[:postcode]%><br><%= current_user.address[:city]%><br><%= current_user.address[:country]%></p>
+    
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Promo Code">
+
     </div>
   </div>
   <div class="delivery-payment-options">
@@ -22,7 +25,8 @@
     <%= simple_form_for [@order] do |f| %>
         <%= f.input :payment_method, as: :radio_buttons %>
         <%= f.input :delivery, selected: 1, hint: "Learn more about delivery options »" %>
-      <div class="calculate-total">
+        
+      <div class="calculate-total mt-2">
         <p><strong>Order total:</strong><p class="total-order">£<%= (@current_cart.sub_total + 5.99) %> </p></p>  
       </div>
      

@@ -13,12 +13,15 @@
 
         .product-card {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             margin: 5px;
 
             .miniature {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 margin-right: 15px;
-                height: 100px;
+                height: 145px;
                 img {
                     height: 100%;
                 }
